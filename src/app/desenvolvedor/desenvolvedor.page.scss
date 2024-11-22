@@ -1,0 +1,114 @@
+.body{
+    --ion-background-color: #FFFFFF;
+    position: fixed;
+}
+.lucas{
+box-sizing: border-box;
+position: absolute;
+width: 105px;
+height: 113px;
+left: 144px;
+top: 499px;
+border: 1px solid #FFFFFF;
+border-radius: 30px;
+}
+.alan{
+box-sizing: border-box;
+position: absolute;
+width: 105px;
+height: 113px;
+left: 144px;
+top: 236px;
+
+
+border: 1px solid #FFFFFF;
+border-radius: 30px;
+}
+.alan-text{
+position: absolute;
+width: 116px;
+height: 22px;
+left: 139px;
+top: 377px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 22px;
+/* identical to box height, or 138% */
+
+color: #000000;
+
+
+}
+.lucas-text{
+position: absolute;
+width: 84px;
+height: 22px;
+left: 155px;
+top: 640px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 22px;
+/* identical to box height, or 138% */
+
+color: #000000;
+}
+.alan-matr{
+position: absolute;
+width: 72px;
+height: 22px;
+left: 161px;
+top: 404px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 22px;
+/* identical to box height, or 138% */
+
+color: #000000;
+}
+.lucas-matr{
+position: absolute;
+width: 80px;
+height: 22px;
+left: 165px;
+top: 662px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 22px;
+/* identical to box height, or 138% */
+
+color: #000000;
+}
+.titulo{
+position: absolute;
+width: 149px;
+height: 22px;
+left: 122px;
+top: 64px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 22px;
+/* identical to box height, or 92% */
+
+color: #000000;
+}
+.volta{
+   --background: #F7F2FA;
+   margin-top: 2%;
+}
+ion-icon {
+    color: rgb(0, 0, 0);
+  }

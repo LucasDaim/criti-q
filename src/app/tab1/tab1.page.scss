@@ -1,0 +1,31 @@
+.logo {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px; 
+    height: auto;
+  }
+  
+  .icons {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 16px;
+  }
+  
+  #btn, #btn2 {
+    font-size: 24px;
+    color: white;
+  }
+  
+  .topo {
+    --background: #6A007B;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  

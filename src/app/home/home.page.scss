@@ -1,0 +1,87 @@
+    .body{
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        top: 0%;
+        bottom: 0%;
+    --ion-background-color: #6A007B;
+    }
+    .começar{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        gap: 8px;
+        
+        position: absolute;
+        left: 37.4%;
+        right: 37.4%;
+        top: 79.34%;
+        bottom: 14.2%;
+        
+        --background: #F7F2FA;
+        box-shadow: inset 0px 1px 4px rgba(12, 12, 13, 0.05);
+        border-radius: 35px;
+
+    }
+    .logo{
+        position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 20.42%;
+    bottom: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+     /*align-items: center;
+    padding: 10px 24px;
+    gap: 8px;
+
+    width: 99px;
+    height: 55px;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 1; */
+
+
+    }
+    .texto{
+        position: absolute;
+    left: 16.03%;
+    right: 16.03%;
+    top: 56.22%;
+    bottom: 26.88%;
+
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 22px;
+    /* or 147% */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.1px;
+
+    color: #FFFFFF;
+
+    backdrop-filter: blur(2px);
+    }
+    .desenvolvedor{
+    margin-left: 33%;
+    margin-top: 200%;
+    position: fixed;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.1px;
+
+    
+    --background: #6A007B
+    }
