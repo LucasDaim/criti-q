@@ -8,12 +8,14 @@ import { Router } from '@angular/router';
 })
 export class HomePage implements OnInit {
 
-  constructor(private rota:Router) { }
-    redirecionar(){
-      this.rota.navigateByUrl('/desenvolvedor')
+  constructor (private router: Router ) {}
+    logout() {
+    this.router.navigate (["/" ]);
     }
-  ngOnInit() {
-  }
-
-}
-
+    intro() {
+    this.router.navigate (["/tabs" ]);
+    }
+    ngOnInit() {
+    }
+    
+    }
