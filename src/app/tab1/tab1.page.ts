@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +8,26 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  users: any[] = [];
+  loadUsers: any;
 
+  constructor(private apiService: ApiService) {}
+
+  ngOnInit() {
+    this.loadUsers();this.loadData()
+  }
+  data: any[] = [];
+
+ 
+  loadData() {
+    this.apiService.get('users').subscribe(
+      (response) => {
+        console.log('Dados recebidos:', response);
+        this.data = response;
+      },
+      (error) => {
+        console.error('Erro ao carregar dados:', error);
+      }
+    );
+  }
 }

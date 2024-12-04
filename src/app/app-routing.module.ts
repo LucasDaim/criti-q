@@ -30,6 +30,11 @@ const routes: Routes = [
     path: 'publica',
     loadChildren: () => import('./publica/publica.module').then( m => m.PublicaPageModule)
   },
+  {
+    path: 'test',
+    loadChildren: () => import('./test/test.module').then( m => m.TestPageModule)
+  },
+
   
 ];
 @NgModule({

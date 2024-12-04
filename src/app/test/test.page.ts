@@ -3,15 +3,14 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NavController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-cadastro',
-  templateUrl: './cadastro.page.html',
-  styleUrls: ['./cadastro.page.scss'],
+  selector: 'app-test',
+  templateUrl: './test.page.html',
+  styleUrls: ['./test.page.scss'],
 })
-export class CadastroPage implements OnInit {
+export class TestPage implements OnInit {
   cadastroForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder, private navCtrl: NavController) {
-    // Inicializa o formulário no construtor
     this.cadastroForm = this.formBuilder.group({
       nome: ['', Validators.required],
       usuario: ['', Validators.required],
@@ -20,19 +19,13 @@ export class CadastroPage implements OnInit {
     });
   }
 
-  ngOnInit() {
-    // Qualquer lógica adicional que você deseja executar ao inicializar o componente
-  }
+  ngOnInit() {}
 
   onSubmit() {
     if (this.cadastroForm.valid) {
       const { nome, usuario, email, senha } = this.cadastroForm.value;
-
-      // Aqui você pode implementar a lógica para registrar o usuário
       console.log('Cadastro realizado com sucesso!', { nome, usuario, email, senha });
-
-      // Navegar para outra página após o cadastro bem-sucedido
-      this.navCtrl.navigateForward('/'); // Altere para a sua página de destino
+      this.navCtrl.navigateForward('/'); // Substitua pelo caminho correto
     } else {
       console.log('Formulário inválido');
     }
