@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { NavController } from '@ionic/angular';
+import { Router } from '@angular/router';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { ToastController, LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-cadastro',
@@ -8,33 +9,50 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['./cadastro.page.scss'],
 })
 export class CadastroPage implements OnInit {
-  cadastroForm: FormGroup;
+  email: string = '';
+  password: string = '';
+  isRegistered: boolean = false;
 
-  constructor(private formBuilder: FormBuilder, private navCtrl: NavController) {
-    // Inicializa o formulário no construtor
-    this.cadastroForm = this.formBuilder.group({
-      nome: ['', Validators.required],
-      usuario: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      senha: ['', Validators.required],
+  constructor(
+    private rota: Router,
+    private afAuth: AngularFireAuth,
+    private toastController: ToastController,
+    private loadingController: LoadingController
+  ) {}
+
+  async register() {
+    const loading = await this.loadingController.create({
+      message: 'Registrando...',
     });
-  }
+    await loading.present();
 
-  ngOnInit() {
-    // Qualquer lógica adicional que você deseja executar ao inicializar o componente
-  }
-
-  onSubmit() {
-    if (this.cadastroForm.valid) {
-      const { nome, usuario, email, senha } = this.cadastroForm.value;
-
-      // Aqui você pode implementar a lógica para registrar o usuário
-      console.log('Cadastro realizado com sucesso!', { nome, usuario, email, senha });
-
-      // Navegar para outra página após o cadastro bem-sucedido
-      this.navCtrl.navigateForward('/'); // Altere para a sua página de destino
-    } else {
-      console.log('Formulário inválido');
+    try {
+      const user = await this.afAuth.createUserWithEmailAndPassword(
+        this.email,
+        this.password
+      );
+      await loading.dismiss();
+      this.isRegistered = true;
+      this.showToast('Cadastro realizado com sucesso!');
+      this.rota.navigateByUrl('/tabs'); // Redirecionar para a tela inicial ou de login
+    } catch (error) {
+      await loading.dismiss();
+      const errorMessage = (error as Error)?.message || 'Erro desconhecido';
+      this.showToast(`Erro ao registrar: ${errorMessage}`);
     }
   }
+
+  async showToast(message: string) {
+    const toast = await this.toastController.create({
+      message,
+      duration: 2000,
+    });
+    toast.present();
+  }
+
+  redirecionar_login() {
+    this.rota.navigateByUrl('/login');
+  }
+
+  ngOnInit() {}
 }
