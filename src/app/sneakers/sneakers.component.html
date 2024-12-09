@@ -1,0 +1,20 @@
+<ion-content>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Sneakers</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <div *ngIf="loading">Carregando...</div>
+    <div *ngIf="!loading && sneakers.length === 0">Nenhum tênis encontrado.</div>
+    <ion-list>
+      <ion-item *ngFor="let sneaker of sneakers">
+        <ion-label>
+          <h2>{{ sneaker.name }}</h2>
+          <p>{{ sneaker.brand }}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-content>
