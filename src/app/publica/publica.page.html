@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar class="topo">
+    <ion-icon class="volta" routerLink="/tabs" name="arrow-back-outline"></ion-icon>
+    <ion-title>Publicar Post</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-label position="stacked">Escreva sua mensagem</ion-label>
+    <ion-textarea [(ngModel)]="postMessage" placeholder="Digite seu post..."></ion-textarea>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Selecione uma imagem (opcional)</ion-label>
+    <ion-button (click)="uploadImage()" color="primary">Escolher imagem</ion-button>
+  </ion-item>
+
+  <ion-item *ngIf="image">
+    <ion-img [src]="image" alt="Imagem do post"></ion-img>
+  </ion-item>
+
+  <ion-button expand="full" color="success" (click)="publishPost()">Publicar</ion-button>
+</ion-content>

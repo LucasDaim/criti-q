@@ -1,0 +1,75 @@
+/* Estrutura Principal */
+.container {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.titulo {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+/* Estilo para os inputs */
+ion-item {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 16px;
+}
+
+ion-input {
+  --border-radius: 12px;
+  --background: #f4f4f4;
+  --placeholder-color: #aaa;
+  --color: #333;
+  --border-width: 2px;
+  --border-color: #ccc;
+  --focus-border-color: #222428;
+  padding: 12px;
+}
+
+/* Estilo do botão */
+.btn {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  padding: 14px;
+  background-color: #222428;
+  color: white;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #222428;
+}
+
+/* Estilo do texto de link */
+/* Estilo para a parte do link */
+.link-container {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.link {
+  font-size: 14px;
+  color: #333;
+}
+
+.link a {
+  color: #6200ea;
+  font-size: 14px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.link a:hover {
+  color: #3700b3;
+}
+

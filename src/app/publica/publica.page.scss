@@ -1,0 +1,37 @@
+/* Modifica a cor do topo */
+.topo {
+    --background: #6A007B; /* Cor roxa padrão para o fundo */
+    --ion-toolbar-background: #6A007B; /* Aplica a mesma cor no background do toolbar */
+    --color: white; /* Cor do texto para branco, para destacar no fundo roxo */
+  }
+  
+  /* Se precisar ajustar outras partes do topo, como o ícone de volta */
+  .volta {
+    color: white; /* Cor branca para o ícone de volta */
+  }
+  
+  
+  ion-title {
+    font-size: 22px;
+    color: white;
+  }
+  
+  ion-item {
+    margin-bottom: 10px;
+  }
+  
+  ion-textarea {
+    background-color: #f7f7f7;
+    border-radius: 8px;
+  }
+  
+  ion-button {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  ion-img {
+    max-width: 100%;
+    margin-top: 10px;
+  }
+  

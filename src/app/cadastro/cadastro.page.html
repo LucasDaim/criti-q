@@ -1,0 +1,43 @@
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <h1 class="titulo">Cadastro</h1>
+
+    <ion-item>
+      <ion-label position="floating" for="email">Email</ion-label>
+      <ion-input
+        id="email"
+        type="email"
+        [(ngModel)]="email"
+        required
+        placeholder="Digite seu email"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating" for="password">Senha</ion-label>
+      <ion-input
+        id="password"
+        type="password"
+        [(ngModel)]="password"
+        required
+        placeholder="Digite sua senha"
+      ></ion-input>
+    </ion-item>
+
+    <ion-button
+      color="dark"
+      expand="block"
+      (click)="register()"
+      class="btn"
+    >
+      Cadastrar
+    </ion-button>
+
+    <div class="link-container">
+      <ion-text class="link">
+        Já tem uma conta?
+        <a routerLink="/login">Faça login</a>
+      </ion-text>
+    </div>
+  </div>
+</ion-content>

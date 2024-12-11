@@ -1,0 +1,35 @@
+.topo {
+    --background: #6A007B;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .volta {
+    font-size: 28px; /* Ajuste o tamanho do ícone de voltar */
+    color: white;
+  }
+  
+  ion-title {
+    font-size: 22px;
+    color: white;
+  }
+  
+  ion-item {
+    margin: 10px 0;
+    background-color: #F7F2FA; /* Cor de fundo para os itens da lista */
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  ion-text {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  ion-icon {
+    color: #6A007B;
+    font-size: 24px; /* Ajuste o tamanho do ícone */
+  }
+  

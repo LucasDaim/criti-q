@@ -1,0 +1,34 @@
+<ion-content [fullscreen]="true">
+  <!-- Barra de ferramentas com logo e ícones -->
+  <ion-toolbar class="topo">
+    <ion-img class="logo" src="/assets/logo.PNG" alt="Logo"></ion-img>
+    <div class="icons">
+      <ion-icon routerLink="/publica" name="add-outline" id="btn"></ion-icon>
+      <ion-icon routerLink="/notifica" name="notifications-outline" id="btn2"></ion-icon>
+    </div>
+  </ion-toolbar>
+  
+  <!-- Feed com ion-card -->
+  <ion-list>
+    <ion-card *ngFor="let tenis of tenisList; let i = index">
+      <ion-card-header>
+        <ion-card-title>{{ tenis.nome }}</ion-card-title>
+        <ion-card-subtitle>Preço: R$ {{ tenis.preco | number:'1.2-2' }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-img [src]="tenis.imagem" alt="{{ tenis.nome }}"></ion-img>
+        
+        <!-- Avaliação com corações -->
+        <div class="avaliacao">
+          <ion-img 
+            *ngFor="let heart of getHearts(tenis.avaliacao); let idx = index"
+            [src]="heart ? '/assets/heart-filled.png' : '/assets/heart-empty.png'"
+            (click)="avaliarTenis(tenis, idx + 1)"
+            [alt]="heart ? 'Coração Preenchido' : 'Coração Vazio'">
+          </ion-img>
+        </div>
+        
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,103 @@
+/* Estilos do cabeçalho */
+.topo {
+  --background: #6A007B;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100px;
+  height: auto;
+}
+
+.icons {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 16px;
+}
+
+#btn, #btn2 {
+  font-size: 24px;
+  color: white;
+}
+
+/* Estilos para o feed de tênis */
+ion-card {
+  margin-bottom: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+ion-card-header {
+  background-color: #f9f9f9;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+ion-card-title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+ion-card-subtitle {
+  font-size: 1em;
+  color: #6a007b;
+}
+
+ion-card-content {
+  padding: 16px;
+}
+
+ion-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Estilos para a área de avaliação */
+.avaliacao {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+ion-img[alt="Coração Preenchido"], ion-img[alt="Coração Vazio"] {
+  width: 32px;
+  height: 32px;
+}
+
+ion-button {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+/* Ajustes de responsividade */
+@media (max-width: 767px) {
+  .logo {
+    width: 80px;
+  }
+
+  .icons {
+    gap: 12px;
+  }
+
+  ion-card {
+    margin-bottom: 12px;
+  }
+
+  ion-img[alt="Coração Preenchido"], ion-img[alt="Coração Vazio"] {
+    width: 28px;
+    height: 28px;
+  }
+}

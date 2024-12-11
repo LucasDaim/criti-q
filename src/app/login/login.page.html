@@ -1,0 +1,20 @@
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <h1 class="titulo">Login</h1>
+  </div>
+
+  <div class="input-container">
+    <ion-input class="input-box" [(ngModel)]="email"  label="Email" label-placement="floating" fill="outline" placeholder="Email"></ion-input>
+    <ion-input class="input-box" [(ngModel)]="password" type="password"  label="Senha" label-placement="floating" fill="outline" placeholder="Senha"></ion-input>
+  </div>
+
+  <div>
+    <ion-button color="dark" expand="block" (click)="login()" class="btn">Login</ion-button>
+  </div>
+
+<div>
+  <div class="link-container">
+    <ion-text class="link">Não tem uma conta? <a routerLink="/cadastro">Cadastre-se</a></ion-text>
+  </div>
+</div>
+</ion-content>
